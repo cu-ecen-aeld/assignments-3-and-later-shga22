@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -std=gnu11 -g -pipe -Wall -Werror
+CFLAGS = -std=gnu11 -g -pipe -Wall -Werror -pthread -lrt
 CPPFLAGS = -D_GNU_SOURCE
  
  BIN = aesdsocket
@@ -21,6 +21,6 @@ CPPFLAGS = -D_GNU_SOURCE
 			  ;; \
 			esac \
 		  done
- 
+	 
  %: %.c
 		$(CROSS_COMPILE)$(CC) $(CFLAGS) $(CPPFLAGS) -o $@ $<
