@@ -1,6 +1,6 @@
 
 CFLAGS = -std=gnu11 -g -pipe -Wall -Werror
-
+CPPFLAGS = -D_GNU_SOURCE
 LDFLAGS = -pthread -lrt
  
 BIN = aesdsocket
